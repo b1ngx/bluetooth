@@ -12,6 +12,6 @@
 - 扫描蓝牙设备，获取未配对蓝牙设备
 - 蓝牙设备配对功能
 
-打包android apk，支持andriod 2.3以上设备
+打包 android apk，支持 andriod 2.3 以上设备
 
-基于cordova 4.3.0、android 4.4 开发
+基于 cordova 4.3.0、android 4.4 开发
