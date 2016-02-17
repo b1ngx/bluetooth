@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.hlf.app" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="BluetoothSerial">
+        <param name="android-package" value="com.megster.cordova.BluetoothSerial" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <name>蓝牙</name>
+    <description>
+        蓝色的牙
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Ya Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

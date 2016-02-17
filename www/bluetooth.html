@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <link rel="stylesheet" href="frozenui/1.2.1/css/frozen.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>蓝牙模块</title>
+</head>
+<body>
+
+<div class="app">
+    <section class="ui-notice hide" id="disabled_js">
+        <i></i>
+        <p>请开启蓝牙</p>
+    </section>
+
+    <section class="ui-notice hide" id="no_device_js">
+        <i></i>
+        <p>没有配对设备</p>
+    </section>
+    <div class="ui-tips ui-tips-info hide" id="is_connected_js">
+        <i></i>提供相关的信息或建议
+    </div>
+    <ul class="ui-list ui-list-text ui-border-tb" id="devices_js">
+
+    </ul>
+    <div class="ui-form ui-border-t" style="margin-top: 20px">
+        <form action="#" >
+            <div class="ui-form-item ui-form-item-order ui-border-b" id="open_setting_js">
+                <a href="#">打开蓝牙设置</a>
+            </div>
+            <div class="ui-form-item ui-form-item-order ui-border-b" id="scan_js">
+                <a href="#">扫描蓝牙设备</a>
+            </div>
+            <div class="ui-loading-wrap hide" id="scanning_js">
+                <p>扫描中</p>
+                <i class="ui-loading"></i>
+            </div>
+        </form>
+    </div>
+    <ul class="ui-list ui-list-text ui-border-tb" id="unpaired_devices_js">
+
+    </ul>
+    <div class="ui-tips ui-tips-info" id="no_unpaired_js">
+
+    </div>
+</div>
+<script type="text/x-handlebars" id="device_tpl">
+    <% for(var i=0; i<devices.length; i++) { var device = devices[i]; %>
+    <li class="ui-border-t">
+        <div class="ui-list-info">
+            <h4 class="ui-nowrap"><%=device.name %></h4>
+            <p><%=device.address %></p>
+        </div>
+        <div class="ui-list-action">已配对</div>
+    </li>
+    <% } %>
+</script>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="frozenjs/lib/zepto.js"></script>
+<script type="text/javascript" src="frozenjs/1.0.1/frozen.js"></script>
+<script type="text/javascript" src="js/bluetooth.js"></script>
+</body>
+</html>
